@@ -4,13 +4,13 @@ import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
 
 @NodeEntity
-public class course {
+public class Course {
 
     @GraphId
     private Long id;
     private String name;
 
-    public course() {
+    public Course() {
 
     }
 
