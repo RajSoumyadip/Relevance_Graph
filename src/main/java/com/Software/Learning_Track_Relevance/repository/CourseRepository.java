@@ -8,6 +8,6 @@ import java.util.Collection;
 
 public interface CourseRepository extends Neo4jRepository<Course, Long> {
 
-    @Query("")
+    @Query("MATCH (c1:Course)<- [r:RELATED_TO]-(c2:Course) RETURN c1,r,c2")
     public Collection<Course> getAllCourses();
 }
