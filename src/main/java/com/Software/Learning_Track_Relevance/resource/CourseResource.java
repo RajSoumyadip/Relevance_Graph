@@ -1,5 +1,6 @@
 package com.Software.Learning_Track_Relevance.resource;
 
+import com.Software.Learning_Track_Relevance.model.Course;
 import com.Software.Learning_Track_Relevance.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,8 @@ public class CourseResource {
     CourseService courseService;
 
     @GetMapping
-    public Collection<Course> getAll();
+    public Collection<Course> getAll(){
+        return courseService.getAll();
+    }
 
 }
